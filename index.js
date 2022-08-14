@@ -28,7 +28,7 @@ function informationSent(mailInfo) {
 
         const msg = {
           from: 'testingdeveloper431@gmail.com', // sender address
-          to: "aarifurrahman93@gmail.com", // list of receivers
+          to: "info@redpositive.in", // list of receivers
           subject: `sending information`, // Subject line
           text: "hey you got a info", // plain text body
           html: `
