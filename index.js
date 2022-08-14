@@ -21,14 +21,14 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 function informationSent(mailInfo) {
 
-  const {name,phoneNumber,email,hobbies}=mailInfo
-  console.log(mailInfo);
+  const {name,phoneNumber,email,hobbies}=mailInfo.infodata
+  console.log("mail info from information", mailInfo);
 
         // sending mail via nodemailer
 
         const msg = {
           from: 'testingdeveloper431@gmail.com', // sender address
-          to: "info@redpositive.in", // list of receivers
+          to: "aarifurrahman93@gmail.com", // list of receivers
           subject: `sending information`, // Subject line
           text: "hey you got a info", // plain text body
           html: `
@@ -123,7 +123,7 @@ async function run() {
       // post to mail sending collection
       app.post('/mailsender', async (req, res) => {
         const mailInfo = req.body;
-        console.log(mailInfo);
+        console.log("mailinfo",mailInfo);
         informationSent(mailInfo);
         const result = await sendingMailCollection.insertOne(mailInfo)
         res.send(result);
