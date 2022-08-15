@@ -46,7 +46,7 @@ function informationSent(mailInfo) {
           service:'gmail',
       auth: {
         user: "testingdeveloper431@gmail.com",
-        pass: "yvpridhsifmgohzm", 
+        pass: "ajexwpkgpewiohct", 
       },
       port: 587,
       host: "smtp.ethereal.email",
